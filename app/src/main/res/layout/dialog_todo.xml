@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="180dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="28dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Place to enter the task -->
+        <EditText
+            android:id="@+id/todoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter the to-do item here"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"/>
+
+        <!-- Layout for two buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- OK Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOk"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="OK"
+                android:textSize="12sp"
+                app:backgroundTint="#6750A4"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="20dp"/>
+
+            <!-- the gap between 2 buttons= 12dp -->
+            <View
+                android:layout_width="12dp"
+                android:layout_height="0dp"/>
+
+            <!-- Cancel Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:text="Cancel"
+                android:textSize="12sp"
+                android:textColor="#000000"
+                app:strokeColor="#6750A4"
+                app:cornerRadius="20dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

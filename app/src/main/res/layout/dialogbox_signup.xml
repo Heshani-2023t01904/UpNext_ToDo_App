@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FEF7FF"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!--"Sign up for an account" text-->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up for an account"
+            android:textColor="#1D1B20"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--"It looks like you don't have an account. Please sign up to continue." text-->
+        <TextView
+            android:id="@+id/dialogMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="It looks like you don't have an account. Please sign up to continue."
+            android:textColor="#49454F"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialogTitle" />
+
+        <!-- not now button-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelNoAccount"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Not now"
+            android:textColor="#6750A4"
+            app:layout_constraintEnd_toStartOf="@+id/btnGoToSignup"
+            app:layout_constraintTop_toBottomOf="@id/dialogMessage" />
+
+        <!-- sign up button-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoToSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:backgroundTint="#6750A4"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnCancelNoAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnCancelNoAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

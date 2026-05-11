@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="332dp"
+    android:layout_height="156dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="28dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <!--dialog box-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- "Really want to sign out "text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Really want to sign out?"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="24dp"/>
+
+        <!--2 button layout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--ok button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOutOk"
+                android:layout_width="80dp"
+                android:layout_height="44dp"
+                android:text="OK"
+                app:backgroundTint="#6750A4"
+                android:textColor="#FFFFFF"
+                app:cornerRadius="22dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!--cancel button-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOutCancel"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="92dp"
+                android:layout_height="46dp"
+                android:text="Cancel"
+                android:textColor="#000000"
+                app:strokeColor="#6750A4"
+                app:cornerRadius="22dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
